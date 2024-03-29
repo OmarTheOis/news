@@ -48,28 +48,7 @@ class drawer extends StatelessWidget {
               ),
             ),
           ),
-          InkWell(
-            onTap: (){
-              navigatorkey.currentState!.pushReplacementNamed(PageRouteName.setting);
-            },
-            child: Padding(
-              padding: EdgeInsets.only(
-                left: 10,
-                right: 15,
-                top: 25,
-                bottom: 10,
-              ),
-              child: Row(
-                children: [
-                  Icon(Icons.settings,size: 25,color: Colors.black,),
-                  SizedBox(width: 10,),
-                  Text("settings",style: constants.theme.textTheme.bodyLarge?.copyWith(color: Colors.black),)
 
-
-                ],
-              ),
-            ),
-          )
         ],
       ),
 

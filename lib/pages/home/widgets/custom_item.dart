@@ -27,6 +27,7 @@ class customitem extends StatelessWidget {
               topRight: Radius.circular(20),
               bottomRight:index%2==0? Radius.circular(0):Radius.circular(25),
               bottomLeft: index%2==0? Radius.circular(25):Radius.circular(0),
+
             )
         ),
         child: Column(
@@ -34,7 +35,7 @@ class customitem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(categoryModel.image,fit: BoxFit.cover,),
-            Text(categoryModel.title,style: constants.theme.textTheme.bodySmall,)
+            Text(categoryModel.title,style: constants.theme.textTheme.bodyLarge,)
           ],
         ),
       ),

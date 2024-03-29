@@ -34,7 +34,7 @@ class Appthemes{
         ),
         bodyMedium: TextStyle(
           fontFamily: "Exo",
-          fontWeight: FontWeight.bold,
+          //fontWeight: FontWeight.bold,
           fontSize: 14,
           color: Colors.white,
         ),

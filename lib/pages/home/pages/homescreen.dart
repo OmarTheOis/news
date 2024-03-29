@@ -55,7 +55,7 @@ class _homescreenState extends State<homescreen> {
     void oncatgoryclicked(CategoryModel categorymodel) {
 
       selectcategory = categorymodel;
-      apimanager.fetchDataSources(selectcategory!.id);
+      apimanager.fetchDataArticels("bbc-sport");
       setState(() {});
     }
 
@@ -71,7 +71,7 @@ class _homescreenState extends State<homescreen> {
         appBar: AppBar(
           leadingWidth: 100,
           title: Text(
-            selectcategory == null ? "News App" : selectcategory!.id,
+            selectcategory == null ? "News App" : selectcategory!.title,
             style: constants.theme.textTheme.titleLarge,
           ),
         ),
@@ -82,11 +82,15 @@ class _homescreenState extends State<homescreen> {
             ? Padding(
                 padding: EdgeInsets.all(10),
                 child: Column(
+                    
                   children: [
-                    Text(
-                      "Pick your category \nof interest",
-                      style: constants.theme.textTheme.bodyLarge?.copyWith(
-                        color: Color(0XFF4F5A69),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 50),
+                      child: Text(
+                        "Pick your category of interest",
+                        style: constants.theme.textTheme.titleLarge?.copyWith(
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                     Expanded(
